@@ -15,38 +15,38 @@
         android:id="@+id/imageView"
         android:layout_width="120dp"
         android:layout_height="150dp"
+        android:layout_above="@+id/main_signin"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
+        android:layout_marginBottom="73dp"
         android:src="@drawable/twotr_main" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/main_signin"
         android:layout_width="170dp"
         android:layout_height="40dp"
-        android:layout_above="@+id/button2"
+        android:layout_above="@+id/main_guest"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="29dp"
-        android:background="@color/buttonColorPrimary"
+        android:layout_marginBottom="20dp"
+        android:background="@color/colorAccent"
         android:fontFamily="@font/montserrat"
         android:text="Sign In"
-        android:textSize="14sp"
         android:textAllCaps="false"
-        android:textColor="#fff" />
+        android:textColor="#fff"
+        android:textSize="14sp" />
 
     <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
+        android:id="@+id/main_guest"
+        android:layout_width="170dp"
         android:layout_height="40dp"
-        android:layout_above="@+id/textView"
-        android:layout_alignEnd="@+id/button"
-        android:layout_alignStart="@+id/button"
-        android:layout_marginBottom="33dp"
-        android:textSize="14sp"
-        android:textColor="#767676"
+        android:layout_above="@+id/newcust"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="90dp"
         android:background="@color/buttonColorSecondary"
         android:fontFamily="@font/montserrat"
         android:text="Guest"
-        android:textAllCaps="false" />
+        android:textAllCaps="false"
+        android:textColor="#767676"
+        android:textSize="14sp" />
 
     <!--<com.github.whilu.library.CustomRippleButton-->
     <!--android:layout_width="180dp"-->
@@ -67,7 +67,7 @@
     <!--whilu:shape_type="rectangle"-->
     <!--whilu:unpressed_color="@color/buttonColorPrimary" />-->
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/newcust"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -80,12 +80,12 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView"
-        android:layout_alignBottom="@+id/textView"
-        android:layout_toEndOf="@+id/textView"
+        android:layout_alignBaseline="@+id/newcust"
+        android:layout_alignBottom="@+id/newcust"
+        android:layout_toEndOf="@+id/newcust"
         android:fontFamily="@font/montserrat"
         android:text="Sign UP"
-        android:textColor="@color/buttonColorPrimary"
+        android:textColor="@color/colorAccent"
         android:id="@+id/sign_up" />
 
 </RelativeLayout>

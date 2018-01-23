@@ -4,4 +4,5 @@
     <string name="title_activity_main">MainActivity</string>
     <string name="sign_in">Sign In</string>
     <string name="title_activity_signup">SignupActivity</string>
+    <string name="title_activity_signin">SigninActivity</string>
 </resources>
