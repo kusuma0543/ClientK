@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rel_layout"
+    xmlns:whilu="http://schemas.android.com/apk/res-auto"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.twotr.twotr.MainActivity"
+    >
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="120dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/twotr_main" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="170dp"
+        android:layout_height="40dp"
+        android:layout_above="@+id/button2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="29dp"
+        android:background="@color/buttonColorPrimary"
+        android:fontFamily="@font/montserrat"
+        android:text="Sign In"
+        android:textSize="14sp"
+        android:textAllCaps="false"
+        android:textColor="#fff" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_above="@+id/textView"
+        android:layout_alignEnd="@+id/button"
+        android:layout_alignStart="@+id/button"
+        android:layout_marginBottom="33dp"
+        android:textSize="14sp"
+        android:textColor="#767676"
+        android:background="@color/buttonColorSecondary"
+        android:fontFamily="@font/montserrat"
+        android:text="Guest"
+        android:textAllCaps="false" />
+
+    <!--<com.github.whilu.library.CustomRippleButton-->
+    <!--android:layout_width="180dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginBottom="180dp"-->
+    <!--android:layout_marginEnd="8dp"-->
+    <!--android:layout_marginStart="8dp"-->
+    <!--android:fontFamily="@font/montserrat"-->
+    <!--android:text="@string/sign_in"-->
+    <!--android:textColor="#fff"-->
+    <!--android:textStyle="bold"-->
+    <!--app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--app:layout_constraintEnd_toEndOf="parent"-->
+    <!--app:layout_constraintStart_toStartOf="parent"-->
+    <!--whilu:ripple_color="@color/buttonColorPrimary"-->
+    <!--whilu:ripple_duration="500"-->
+    <!--whilu:round_radius="10dp"-->
+    <!--whilu:shape_type="rectangle"-->
+    <!--whilu:unpressed_color="@color/buttonColorPrimary" />-->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/imageView"
+        android:layout_marginBottom="14dp"
+        android:fontFamily="@font/montserrat"
+        android:text="I'm new,I'll "
+        android:textColor="#000" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView"
+        android:layout_alignBottom="@+id/textView"
+        android:layout_toEndOf="@+id/textView"
+        android:fontFamily="@font/montserrat"
+        android:text="Sign UP"
+        android:textColor="@color/buttonColorPrimary"
+        android:id="@+id/sign_up" />
+
+</RelativeLayout>
