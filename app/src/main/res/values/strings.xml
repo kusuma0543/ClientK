@@ -17,4 +17,6 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="referal_code">Referal Code (Optional)</string>
+    <string name="create_subject">Create Subject</string>
+    <string name="type_and_choose_subject">Type and Choose Subject</string>
 </resources>
