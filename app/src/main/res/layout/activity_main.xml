@@ -7,7 +7,7 @@
     android:id="@+id/rel_layout"
     xmlns:whilu="http://schemas.android.com/apk/res-auto"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.twotr.twotr.MainActivity"
+    tools:context="com.twotr.twotr.globalpackfiles.MainActivity"
     >
 
 
@@ -29,7 +29,7 @@
         android:layout_marginBottom="20dp"
         android:background="@color/colorAccent"
         android:fontFamily="@font/montserrat"
-        android:text="Sign In"
+        android:text="@string/sign_in"
         android:textAllCaps="false"
         android:textColor="#fff"
         android:textSize="14sp" />
@@ -84,7 +84,7 @@
         android:layout_alignBottom="@+id/newcust"
         android:layout_toEndOf="@+id/newcust"
         android:fontFamily="@font/montserrat"
-        android:text="Sign UP"
+        android:text="@string/sign_up"
         android:textColor="@color/colorAccent"
         android:id="@+id/sign_up" />
 

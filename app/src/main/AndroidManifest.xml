@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".SplashActivity"
+            android:name=".globalpackfiles.SplashActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -20,7 +20,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".globalpackfiles.MainActivity"
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBar" />
 
@@ -29,24 +29,27 @@
             android:resource="@array/preloaded_fonts" />
 
         <activity
-            android:name=".SignupActivity"
+            android:name=".globalpackfiles.SignupActivity"
             android:label="@string/title_activity_signup"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".globalpackfiles.MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.twotr.twotr.MainActivity" />
+                android:value="com.twotr.twotr.globalpackfiles.MainActivity" />
         </activity>
         <activity
-            android:name=".SigninActivity"
+            android:name=".globalpackfiles.SigninActivity"
             android:label="@string/title_activity_signin"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".globalpackfiles.MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.twotr.twotr.MainActivity" />
-
+                android:value="com.twotr.twotr.globalpackfiles.MainActivity" />
         </activity>
+        <activity
+            android:name=".tutorfiles.HomePage"
+            android:label="@string/title_activity_home_page"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

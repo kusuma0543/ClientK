@@ -1,4 +1,4 @@
-package com.twotr.twotr;
+package com.twotr.twotr.globalpackfiles;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -6,9 +6,11 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
 
+import com.twotr.twotr.R;
+
 public class SignupActivity extends AppCompatActivity {
 ImageButton IBsignup_back;
-EditText ETusername,ETemail,ETpassword,ETconfirm_pass;
+EditText ETusername,ETpassword,ETconfirm_pass;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -16,7 +18,7 @@ EditText ETusername,ETemail,ETpassword,ETconfirm_pass;
 
 IBsignup_back=findViewById(R.id.signup_back);
 ETusername=findViewById(R.id.username_signup);
-ETemail=findViewById(R.id.email_signup);
+
 ETpassword=findViewById(R.id.pass_signup);
 ETconfirm_pass=findViewById(R.id.confpass_signup);
 
@@ -35,20 +37,7 @@ ETusername.setOnFocusChangeListener(new View.OnFocusChangeListener() {
         }
     }
 });
-        ETemail.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View v, boolean hasFocus) {
-                if (hasFocus)
-                {
-                    ETemail.setBackgroundResource( R.drawable.edittext_selected);
-                }
-                else
-                {
-                    ETemail.setBackgroundResource( R.drawable.edittext_unselected);
 
-                }
-            }
-        });
         ETpassword.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {

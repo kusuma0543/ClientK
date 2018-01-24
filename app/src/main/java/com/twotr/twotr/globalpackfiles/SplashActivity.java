@@ -1,4 +1,4 @@
-package com.twotr.twotr;
+package com.twotr.twotr.globalpackfiles;
 
 import android.content.Intent;
 import android.media.MediaPlayer;
@@ -6,6 +6,8 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.VideoView;
+
+import com.twotr.twotr.R;
 
 public class SplashActivity extends AppCompatActivity {
     VideoView videoView;
