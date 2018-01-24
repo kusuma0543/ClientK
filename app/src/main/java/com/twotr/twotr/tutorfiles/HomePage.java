@@ -27,32 +27,21 @@ public class HomePage extends AppCompatActivity {
             public void onTabSelected(@IdRes int tabId) {
                 android.support.v4.app.Fragment selectedFragment = null;
                 if (tabId == R.id.tab_schedules) {
-                   // selectedFragment = NewJobs.newInstance();
-                    Toast.makeText(HomePage.this, "hello", Toast.LENGTH_SHORT).show();
+                 selectedFragment = TutorSchedule.newInstance();
                 }
                 else if (tabId == R.id.tab_dashboard) {
-                   // selectedFragment = OnGoingPartJobs.newInstance();
-                    Toast.makeText(HomePage.this, "hello", Toast.LENGTH_SHORT).show();
-
+                   selectedFragment = TutorDashboard.newInstance();
                 }
                 else if (tabId == R.id.tab_create) {
-                    //selectedFragment = FinishedPartJobs.newInstance();
-                    Toast.makeText(HomePage.this, "hello", Toast.LENGTH_SHORT).show();
-
+                  selectedFragment = TutorCreate.newInstance();
                 }
 
                 else if (tabId == R.id.tab_settings) {
-                   // selectedFragment = OnGoing.newInstance();
-                    Toast.makeText(HomePage.this, "hello", Toast.LENGTH_SHORT).show();
-
+                 selectedFragment = TutorSettings.newInstance();
                 }
-// else if (tabId == R.id.tab_recharge) {
-//                    selectedFragment = OnGoing.newInstance();
-//                }
-
-//                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-//                transaction.replace(R.id.contentContainer, selectedFragment);
-//                transaction.commit();
+                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                transaction.replace(R.id.contentContainer, selectedFragment);
+                transaction.commit();
             }
         });
     }
