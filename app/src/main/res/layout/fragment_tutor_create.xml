@@ -1,4 +1,5 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -65,7 +66,7 @@
         android:text="ONE ON ONE" />
 
     <Button
-        android:id="@+id/Group_button"
+        android:id="@+id/group_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -116,6 +117,8 @@
 <LinearLayout
     android:layout_width="match_parent"
     android:weightSum="2"
+    android:id="@+id/liner_tot"
+
     android:layout_gravity="center"
     android:gravity="center"
     android:layout_weight="1"
@@ -157,37 +160,75 @@
             android:layout_width="match_parent"
             android:weightSum="2"
             android:layout_weight="1"
+            android:orientation="horizontal"
             android:layout_height="wrap_content">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_weight="1"
+    android:weightSum="2"
+    android:orientation="horizontal"
+    android:background="@drawable/edittext_unselected"
+android:padding="5dp"
+    android:layout_margin="5dp"
 
-            <EditText
+    android:layout_height="match_parent">
+
+
+            <TextView
                 android:id="@+id/add_schedule_create"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
+             android:layout_gravity="center"
                 android:layout_weight="1"
-                android:background="@drawable/edittext_unselected"
-                android:ems="10"
+                android:padding="2dp"
                 android:fontFamily="@font/montserrat"
-                android:gravity="center"
-                android:hint="Add Schedule"
-                android:inputType="textPersonName"
-                android:padding="5dp"
+                android:textSize="14sp"
+                android:text="Add Schedule"
 
                 />
 
-            <EditText
+    <ImageView
+        android:id="@+id/hint_sched"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:layout_weight="1"
+        app:srcCompat="@drawable/ic_error_outline_black_24dp" />
+</LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:weightSum="2"
+   android:layout_margin="5dp"
+                android:orientation="horizontal"
+                android:background="@drawable/edittext_unselected"
+                android:padding="5dp"
+                android:layout_height="match_parent">
+
+                <TextView
                 android:id="@+id/add_map_create"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:background="@drawable/edittext_unselected"
-                android:ems="10"
+        android:layout_gravity="center"
+                    android:padding="2dp"
                 android:fontFamily="@font/montserrat"
-                android:gravity="center"
-                android:hint="Add Map"
-                android:inputType="textPersonName"
-                android:padding="5dp" />
+android:textSize="14sp"
+                    android:layout_weight="1"
+                android:text="Add Map"
+
+               />
+
+                <ImageView
+                    android:id="@+id/hint_map"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/ic_error_outline_black_24dp" />
+            </LinearLayout>
         </LinearLayout>
         </LinearLayout>
 

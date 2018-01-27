@@ -19,4 +19,6 @@
     <string name="referal_code">Referal Code (Optional)</string>
     <string name="create_subject">Create Subject</string>
     <string name="type_and_choose_subject">Type and Choose Subject</string>
+    <string name="title_activity_addmaptutor">Map</string>
+    <string name="title_activity_schedule_start">ScheduleStart</string>
 </resources>

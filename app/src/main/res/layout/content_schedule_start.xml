@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.twotr.twotr.tutorfiles.ScheduleStart"
+    tools:showIn="@layout/activity_schedule_start">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/top_relat"
+        android:gravity="top"
+        android:background="@color/colorPrimaryDark"
+        android:layout_height="100dp">
+        <TextView
+            android:text="Class Name"
+            android:fontFamily="@font/montserrat"
+            android:layout_width="wrap_content"
+            android:textSize="15sp"
+            android:padding="2dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textColor="#fff"
+            android:layout_height="wrap_content" />
+
+
+
+
+    </RelativeLayout>
+    <devs.mulham.horizontalcalendar.HorizontalCalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/top_relat"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        app:textColorSelected="@color/colorPrimary"/>
+
+</RelativeLayout>
