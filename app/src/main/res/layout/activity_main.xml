@@ -43,7 +43,7 @@
         android:layout_marginBottom="90dp"
         android:background="@color/buttonColorSecondary"
         android:fontFamily="@font/montserrat"
-        android:text="Guest"
+        android:text="@string/guest"
         android:textAllCaps="false"
         android:textColor="#767676"
         android:textSize="14sp" />
@@ -74,7 +74,7 @@
         android:layout_alignStart="@+id/imageView"
         android:layout_marginBottom="14dp"
         android:fontFamily="@font/montserrat"
-        android:text="I'm new,I'll "
+        android:text="@string/iamnew"
         android:textColor="#000" />
 
     <TextView

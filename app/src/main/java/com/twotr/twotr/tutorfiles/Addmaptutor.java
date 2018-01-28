@@ -7,6 +7,7 @@ import android.location.Geocoder;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.common.api.Status;
@@ -32,7 +33,8 @@ public class Addmaptutor extends FragmentActivity implements OnMapReadyCallback 
     private TrackGPS Tgps;
     double Slatitude;
     double Slongitude;
-
+TextView TVlatlong;
+String ScompleteLat;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,7 +43,7 @@ public class Addmaptutor extends FragmentActivity implements OnMapReadyCallback 
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
-
+TVlatlong =findViewById(R.id.text_latlng);
         Tgps = new TrackGPS(Addmaptutor.this);
 
         PlaceAutocompleteFragment autocompleteFragment = (PlaceAutocompleteFragment)
@@ -53,13 +55,14 @@ public class Addmaptutor extends FragmentActivity implements OnMapReadyCallback 
                 // TODO: Get info about the selected place.
                // Log.i(TAG, "Place: " + place.getName());
 
-                String placeDetailsStr = place.getName() + "\n"
-                        + place.getId() + "\n"
-                        + place.getLatLng().toString() + "\n"
-                        + place.getAddress() + "\n"
-                        + place.getAttributions();
-               // txtPlaceDetails.setText(placeDetailsStr);
-                Toast.makeText(Addmaptutor.this, "placeDetailsStr", Toast.LENGTH_SHORT).show();
+//                String placeDetailsStr = place.getName() + "\n"
+//                        + place.getId() + "\n"
+//                        + place.getLatLng().toString() + "\n"
+//                        + place.getAddress() + "\n"
+//                        + place.getAttributions();
+//               // txtPlaceDetails.setText(placeDetailsStr);
+              //  Toast.makeText(Addmaptutor.this, place.getLatLng().toString(), Toast.LENGTH_SHORT).show();
+                TVlatlong.setText(place.getLatLng().toString());
             }
 
             @Override
@@ -99,6 +102,9 @@ public class Addmaptutor extends FragmentActivity implements OnMapReadyCallback 
                             //                         Eaddress.setText(addresses.get(0).getFeatureName() + ", " + addresses.get(0).getLocality() +", " + addresses.get(0).getAdminArea() + ", " + addresses.get(0).getCountryName());
                             Slatitude = addresses.get(0).getLatitude();
                             Slongitude = addresses.get(0).getLongitude();
+                            ScompleteLat=Slatitude+","+Slongitude;
+                            TVlatlong.setText(ScompleteLat);
+
                             //Toast.makeText(getContext(), "Address:- " + addresses.get(0).getFeatureName() + addresses.get(0).getAdminArea() + addresses.get(0).getLocality(), Toast.LENGTH_LONG).show();
                         }
                     }

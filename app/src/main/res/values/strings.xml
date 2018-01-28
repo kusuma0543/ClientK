@@ -21,4 +21,6 @@
     <string name="type_and_choose_subject">Type and Choose Subject</string>
     <string name="title_activity_addmaptutor">Map</string>
     <string name="title_activity_schedule_start">ScheduleStart</string>
+    <string name="guest">Guest</string>
+    <string name="iamnew">I am New I`ll</string>
 </resources>
