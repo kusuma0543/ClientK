@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.twotr.twotr.R;
 
@@ -28,7 +29,7 @@ private Button Boneonone,Bgroup,Baddsubject;
 private EditText ETnofstu,ETtotalamount,ETminamount,ETshortins,ETgrade;
 private TextView TVaddsched,TVaddmap;
 private ImageView IVaddsch,IVaddmap;
-
+private EditText ETtypesearch;
     public static TutorCreate newInstance() {
         TutorCreate fragment= new TutorCreate();
         return fragment;
@@ -53,12 +54,16 @@ ETgrade=view.findViewById(R.id.grade_create);
 IVaddsch=view.findViewById(R.id.hint_sched);
 IVaddmap=view.findViewById(R.id.hint_map);
 Baddsubject=view.findViewById(R.id.add_subject_create);
-
+ETtypesearch=view.findViewById(R.id.type_search);
 
 
 Boneonone.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
+        Boneonone.setBackgroundResource(R.drawable.tab_button_selected);
+        Bgroup.setBackgroundResource(R.drawable.tab_button_unselected);
+        Boneonone.setTextColor(getResources().getColor(R.color.colorwhite));
+        Bgroup.setTextColor(getResources().getColor(R.color.colorPrimaryDark));
         ETnofstu.setHint("No of Students");
         ETnofstu.setVisibility(View.VISIBLE);
         ETtotalamount.setVisibility(View.VISIBLE);
@@ -75,6 +80,10 @@ Boneonone.setOnClickListener(new View.OnClickListener() {
 Bgroup.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
+        Bgroup.setBackgroundResource(R.drawable.tab_button_selected);
+        Boneonone.setBackgroundResource(R.drawable.tab_button_unselected);
+Bgroup.setTextColor(getResources().getColor(R.color.colorwhite));
+        Boneonone.setTextColor(getResources().getColor(R.color.colorPrimaryDark));
 
         ETnofstu.setHint("Total Amount");
         ETnofstu.setVisibility(View.VISIBLE);
@@ -152,8 +161,19 @@ TVaddmap.setOnClickListener(new View.OnClickListener() {
 TVaddsched.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
-        Intent intent = new Intent(getActivity(), ScheduleStart.class);
-        startActivity(intent);
+        String Ssubject_name=ETtypesearch.getText().toString();
+
+        if (Ssubject_name.isEmpty())
+        {
+            Toast.makeText(getActivity(), "Type Subject Name", Toast.LENGTH_SHORT).show();
+        }
+        else
+        {
+            Intent intent = new Intent(getActivity(), ScheduleStart.class);
+            intent.putExtra("sub_name",Ssubject_name);
+            startActivity(intent);
+        }
+
     }
 });
         return  view;
