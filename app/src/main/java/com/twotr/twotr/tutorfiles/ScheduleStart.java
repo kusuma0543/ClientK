@@ -44,11 +44,8 @@ TVsub_name=findViewById(R.id.subject_name);
         {
             String subname = (String) Bintent.get("sub_name");
             TVsub_name.setText(subname);
-
         }
-
         Calendar now = Calendar.getInstance();
-
         tpd = TimePickerDialog.newInstance(
                 ScheduleStart.this,
                 now.get(Calendar.HOUR_OF_DAY),
@@ -84,6 +81,7 @@ TVendtime.setOnClickListener(new View.OnClickListener() {
                 //do something
             }
         });
+
 //        // Initializing a new String Array
 //        String[] fruits = new String[] {
 //                "Cape Gooseberry",
@@ -99,7 +97,6 @@ TVendtime.setOnClickListener(new View.OnClickListener() {
 //
 //        // DataBind ListView with items from ArrayAdapter
 //        LVtimeslot.setAdapter(arrayAdapter);
-
 
 
     }

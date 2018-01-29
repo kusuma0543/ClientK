@@ -7,35 +7,54 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:background="@color/colorPrimaryDark"
-        android:layout_height="60dp">
 
+        android:layout_height="match_parent">
 
-        <Button
-            android:id="@+id/button5"
-            android:layout_width="wrap_content"
+        <RelativeLayout
+            android:id="@+id/top_rel_schedule"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/colorPrimaryDark"
+            android:gravity="center">
 
-            android:background="@color/colorPrimary"
-            android:fontFamily="@font/montserrat"
-            android:text="History"
-            android:textAllCaps="false"
-            android:textColor="@color/colorwhite"
-            android:textSize="16sp" />
+            <Button
+                android:id="@+id/history_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:fontFamily="@font/montserrat"
+                android:padding="5dp"
+                android:text="History"
+                android:textAllCaps="false"
+                android:textColor="@color/colorwhite"
+                android:textSize="16sp" />
 
-        <Button
-            android:id="@+id/button2"
+            <Button
+                android:id="@+id/upcoming_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/history_button"
+                android:background="@color/colorAccent"
+                android:fontFamily="@font/montserrat"
+                android:padding="5dp"
+                android:text="Upcoming"
+                android:textAllCaps="false"
+                android:textColor="@color/colorwhite"
+                android:textSize="16sp" />
+        </RelativeLayout>
 
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
 
-            android:background="@color/colorAccent"
-            android:fontFamily="@font/montserrat"
-            android:text="Upcoming"
-            android:textAllCaps="false"
-            android:textColor="@color/colorwhite"
-            android:textSize="16sp" />
+
+    <ListView
+        android:id="@+id/schedule_list"
+        android:layout_width="match_parent"
+        android:scrollbars="none"
+        android:layout_below="@+id/top_rel_schedule"
+        android:layout_height="match_parent"/>
 
     </RelativeLayout>
-
 </FrameLayout>
