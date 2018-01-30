@@ -2,6 +2,7 @@ package com.twotr.twotr.tutorfiles;
 
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.AsyncTask;
@@ -10,6 +11,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.TextView;
@@ -284,7 +286,11 @@ public class Schedule_class extends ArrayAdapter {
 
             holder.TVsubjectname = convertView.findViewById(R.id.sub_name_sched);
             holder.TVtypemenbers = convertView.findViewById(R.id.group_one_title);
-       //     holder.TVstart_time = convertView.findViewById(R.id.hours_sched);
+            holder.TVschedule_des = convertView.findViewById(R.id.schedule_description);
+            holder.TVprice_schedule = convertView.findViewById(R.id.price_schedule);
+
+
+            //     holder.TVstart_time = convertView.findViewById(R.id.hours_sched);
 
             convertView.setTag(holder);
         }//ino
@@ -294,7 +300,10 @@ public class Schedule_class extends ArrayAdapter {
         Schedule_upcoming_list supl = ScheduleModeList.get(position);
         holder.TVsubjectname.setText(supl.getSubject());
         holder.TVtypemenbers.setText("("+supl.getType()+")");
-       // holder.TVstart_time.setText(supl.getStart());
+        holder.TVschedule_des.setText(supl.getDescription());
+        holder.TVprice_schedule.setText(supl.getPrice());
+
+        // holder.TVstart_time.setText(supl.getStart());
 
 
 //        String strThatDay = holder.text_getingdate.getText().toString();
@@ -322,6 +331,9 @@ public class Schedule_class extends ArrayAdapter {
     class ViewHolder {
         private TextView TVsubjectname;
         private TextView TVtypemenbers;
+        private TextView TVschedule_des;
+        private TextView TVprice_schedule;
+
       //  private TextView TVstart_time;
 
 
@@ -363,7 +375,6 @@ public class Schedule_class extends ArrayAdapter {
                 List<Schedule_upcoming_list> milokilo = new ArrayList<>();
                 Gson gson = new Gson();
                 for (int i = 0; i < parentArray.length(); i++) {
-
                     JSONObject finalObject = parentArray.getJSONObject(i);
                     Schedule_upcoming_list catego = gson.fromJson(finalObject.toString(), Schedule_upcoming_list.class);
                     milokilo.add(catego);
@@ -394,10 +405,22 @@ public class Schedule_class extends ArrayAdapter {
             {
                 Schedule_class adapter = new Schedule_class(getActivity(), R.layout.schedule_list, ScheduleMode);
                 LVschedule.setAdapter(adapter);
+                LVschedule.setOnItemClickListener( new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                        Schedule_upcoming_list schedule_upcoming_list = ScheduleMode.get(position);
+                        Intent intent = new Intent(getActivity(),ScheduleDetailPage.class);
+                        intent.putExtra("subject_name",schedule_upcoming_list.getSubject());
+                        intent.putExtra("type_subject",schedule_upcoming_list.getSubject());
+                        intent.putExtra("schedule_description",schedule_upcoming_list.getDescription());
+                  intent.putExtra("schedule_price",schedule_upcoming_list.getPrice());
+
+                        startActivity(intent);
+                    }
+                });
                 adapter.notifyDataSetChanged();
 
             }
-
 
             }
         }

@@ -260,14 +260,11 @@
         android:layout_alignParentBottom="true"
         android:layout_alignStart="@+id/imageView"
         android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:fontFamily="@font/montserrat"
         android:text="New Customer?"
         android:textColor="#000"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/start_here"
-        app:layout_constraintHorizontal_bias="0.043"
         app:layout_constraintStart_toStartOf="@+id/signin_button" />
 
     <TextView
@@ -277,12 +274,18 @@
         android:layout_alignBaseline="@+id/newcust"
         android:layout_alignBottom="@+id/newcust"
         android:layout_marginBottom="8dp"
-        android:layout_marginEnd="96dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
         android:layout_toEndOf="@+id/newcust"
         android:fontFamily="@font/montserrat"
         android:text="Start Here"
         android:textColor="@color/colorAccent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/newcust"
+        app:layout_constraintTop_toBottomOf="@+id/forgetpass_signin"
+        app:layout_constraintVertical_bias="1.0" />
 
 </android.support.constraint.ConstraintLayout>

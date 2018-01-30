@@ -76,17 +76,27 @@
                 android:layout_toEndOf="@+id/hours_sched"
                 android:text="2:30 | " />
 
+
             <TextView
                 android:id="@+id/month_day_sched"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-
                 android:layout_alignBottom="@+id/time_sched"
                 android:layout_alignTop="@+id/time_sched"
                 android:layout_toEndOf="@+id/time_sched"
                 android:text="Nov 28" />
 
+            <TextView
+                android:id="@+id/schedule_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible" />
+            <TextView
+                android:id="@+id/price_schedule"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible" />
 
         </RelativeLayout>
 

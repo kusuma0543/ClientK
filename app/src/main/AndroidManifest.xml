@@ -78,7 +78,13 @@
         <activity
             android:name=".tutorfiles.ScheduleStart"
             android:label="@string/title_activity_schedule_start"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".tutorfiles.ScheduleDetailPage"
+            android:label="@string/title_activity_schedule_detail_page"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
     </application>
 
 </manifest>

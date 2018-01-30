@@ -23,4 +23,5 @@
     <string name="title_activity_schedule_start">ScheduleStart</string>
     <string name="guest">Guest</string>
     <string name="iamnew">I am New I`ll</string>
+    <string name="title_activity_schedule_detail_page">ScheduleDetailPAge</string>
 </resources>
