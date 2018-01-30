@@ -24,4 +24,9 @@
     <string name="guest">Guest</string>
     <string name="iamnew">I am New I`ll</string>
     <string name="title_activity_schedule_detail_page">ScheduleDetailPAge</string>
+    <string name="title_activity_sample_one">SampleOne</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="title_activity_profile__page">Profile_Page</string>
 </resources>

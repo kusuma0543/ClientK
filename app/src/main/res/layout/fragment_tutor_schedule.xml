@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.twotr.twotr.tutorfiles.TutorSchedule">
 
 
@@ -57,6 +58,16 @@
         android:layout_margin="10dp"
         android:layout_below="@+id/top_rel_schedule"
         android:layout_height="match_parent"/>
-
+        <com.wang.avi.AVLoadingIndicatorView
+            android:id="@+id/avi"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            style="@style/AVLoadingIndicatorView"
+            android:visibility="visible"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            app:indicatorName="BallClipRotateMultipleIndicator"
+            app:indicatorColor="@color/colorPrimaryDark"
+            />
     </RelativeLayout>
 </FrameLayout>

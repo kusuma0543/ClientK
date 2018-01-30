@@ -105,7 +105,6 @@ public class Addmaptutor extends FragmentActivity implements LocationListener, O
             PlaceAutocompleteFragment autocompleteFragment = (PlaceAutocompleteFragment)
                     getFragmentManager().findFragmentById(R.id.place_autocomplete_fragment);
             AutocompleteFilter typeFilter = new AutocompleteFilter.Builder()
-                    .setCountry("IN")
                     .build();
             autocompleteFragment.setFilter(typeFilter);
             autocompleteFragment.setOnPlaceSelectedListener(new PlaceSelectionListener() {

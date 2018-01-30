@@ -7,6 +7,7 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,6 +23,7 @@ import com.baoyz.swipemenulistview.SwipeMenuItem;
 import com.baoyz.swipemenulistview.SwipeMenuListView;
 import com.google.gson.Gson;
 import com.twotr.twotr.R;
+import com.wang.avi.AVLoadingIndicatorView;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -42,6 +44,7 @@ import static android.content.Context.LAYOUT_INFLATER_SERVICE;
  * A simple {@link Fragment} subclass.
  */
 public class TutorSchedule extends Fragment {
+    AVLoadingIndicatorView avi;
 
 private Button Bhistory,Bupcoming;
 SwipeMenuListView LVschedule;
@@ -52,7 +55,7 @@ private  String schedule_list_url;
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
      View view= inflater.inflate(R.layout.fragment_tutor_schedule, container, false);
@@ -60,7 +63,8 @@ private  String schedule_list_url;
      Bhistory=view.findViewById(R.id.history_button);
      Bupcoming=view.findViewById(R.id.upcoming_button);
 LVschedule=view.findViewById(R.id.schedule_list);
-
+        avi=view.findViewById(R.id.avi);
+        avi.show();
          schedule_list_url = "http://twotr.com:4040/api/class/upcoming?page=1&size=10" ;
         new ScheduleAsyncList().execute(schedule_list_url);
         SwipeMenuCreator creator = new SwipeMenuCreator() {
@@ -345,7 +349,7 @@ public class Schedule_class extends ArrayAdapter {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            //dialog.show();
+            //avi.show();
         }
 
         @Override
@@ -400,7 +404,7 @@ public class Schedule_class extends ArrayAdapter {
         @Override
         protected void onPostExecute(final List<Schedule_upcoming_list> ScheduleMode) {
             super.onPostExecute(ScheduleMode);
-            
+            avi.hide();
             if (ScheduleMode!= null)
             {
                 Schedule_class adapter = new Schedule_class(getActivity(), R.layout.schedule_list, ScheduleMode);
