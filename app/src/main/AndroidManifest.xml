@@ -86,6 +86,18 @@
         <activity
             android:name=".tutorfiles.Profile_Page"
             android:label="@string/title_activity_profile__page"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".tutorfiles.Profile_Edit_Personal"
+            android:label="@string/title_activity_profile__edit__personal"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".tutorfiles.Profile_Edit_Educational"
+            android:label="@string/title_activity_profile__edit__educational"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".tutorfiles.Profile_Edit_Professional"
+            android:label="@string/title_activity_profile__edit__professional"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

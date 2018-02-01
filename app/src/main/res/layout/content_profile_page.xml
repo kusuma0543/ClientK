@@ -1,154 +1,204 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.twotr.twotr.tutorfiles.Profile_Page"
-    tools:showIn="@layout/activity_profile_page">
-
     <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:id="@+id/top_relat"
-        android:gravity="top"
-        android:background="@color/colorPrimaryDark"
-        android:layout_height="80dp">
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context="com.twotr.twotr.tutorfiles.Profile_Page"
+        tools:showIn="@layout/activity_profile_page">
 
-        <ImageView
-            android:id="@+id/back_ima_scedule"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_alignParentStart="true"
-            android:layout_centerVertical="true"
-            android:background="@drawable/ic_back_page"
-            android:backgroundTint="#fff" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/top_relat"
+            android:gravity="top"
+            android:background="@color/colorPrimaryDark"
+            android:layout_height="80dp">
+            <ImageView
+                android:id="@+id/back_ima_scedule"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/ic_back_page"
+                android:backgroundTint="#fff" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center|start"
+                android:weightSum="4"
+                android:layout_marginTop="9dp"
+                android:orientation="horizontal"
+                android:layout_marginLeft="50dp">
 
-        <TextView
-            android:id="@+id/subject_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:fontFamily="@font/montserrat"
-            android:padding="2dp"
-            android:text="Profile Info"
-            android:textColor="#fff"
-            android:textSize="20sp" />
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="start|center"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/profile_image_tutor" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_weight="2">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ablert Einsten Paul"
+                        android:textColor="@color/colorwhite"
+                        android:textSize="18sp"
+                        android:layout_gravity="start|center"
 
-    </RelativeLayout>
-    <!--<ScrollView-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_below="@+id/top_relat"-->
-        <!--android:layout_height="match_parent">-->
+                        android:layout_marginLeft="7dp"
+                       />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Ablert Einsten"
+                            android:textColor="@color/colorwhite"
+                            android:textSize="13sp"
+                            android:layout_marginLeft="7dp"
+                            android:layout_gravity="center_horizontal"
+                            android:id="@+id/textView13" />
 
-    <!--<LinearLayout-->
+                        <RatingBar
+                            android:id="@+id/servpdet_ratingbar"
+                            style="?android:attr/ratingBarStyleIndicator"
+                            android:numStars="5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:progressTint="@color/buttonColorPrimary"
+                            android:progressBackgroundTint="@color/colorwhite"
+                            android:secondaryProgressTint="@color/colorwhite"
+                            android:rating="3"
+                            android:scaleX=".4"
+                            android:scaleY=".4"
+                            android:transformPivotX="150dp"
+                            android:transformPivotY="0dp" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/twotr_main" />
+            </LinearLayout>
+
+        </RelativeLayout>
+        <!--<ScrollView-->
             <!--android:layout_width="match_parent"-->
-            <!--android:orientation="horizontal"-->
+            <!--android:layout_below="@+id/top_relat"-->
             <!--android:layout_height="match_parent">-->
 
+        <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:layout_height="match_parent">-->
+
+    <RelativeLayout
+        android:id="@+id/mid_relat"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimaryDarks"
+        android:layout_below="@+id/top_relat">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4"
+            android:layout_marginRight="5dp"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/prof_but_personal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:text="Personal"
+                android:textAllCaps="false"
+                android:textSize="13sp"
+                android:textColor="@color/colorwhite"
+                android:layout_weight="1"/>
+            <Button
+                android:id="@+id/prof_nut_educational"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:text="Educational"
+                android:textAllCaps="false"
+                android:textSize="13sp"
+
+                android:textColor="@color/colorwhite"
+                android:layout_weight="1.4"/>
+            <Button
+                android:id="@+id/prof_but_professional"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:text="Professional"
+                android:textAllCaps="false"
+                android:textSize="13sp"
+
+                android:textColor="@color/colorwhite"
+                android:layout_weight="1.4"/>
+            <Button
+                android:id="@+id/profile_edit"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/ic_profile_edit_icon"
+
+                android:layout_weight="0.2"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+    <ScrollView
+        android:id="@+id/srcollview_personal"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/mid_relat"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/profile_personal_relat" />
+
+    </ScrollView>
 
 
 
-<RelativeLayout
+    <ScrollView
+        android:id="@+id/srcollview_educational"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/mid_relat"
+        android:layout_height="match_parent">
 
-    android:layout_width="match_parent"
-    android:layout_margin="5dp"
-    android:layout_below="@+id/top_relat"
-    android:layout_height="match_parent">
+        <include layout="@layout/profile_educational_relat" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:background="@drawable/profile_image_tutor"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+    </ScrollView>
 
-    <TextView
-        android:id="@+id/profile_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/imageView2"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="13dp"
-        android:gravity="center"
-        android:fontFamily="@font/montserrat"
-        android:text="Profile Name tutor"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="16sp" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/profile_text"
-        android:layout_alignTop="@+id/profile_text"
-        android:layout_toEndOf="@+id/profile_text"
-        android:text="(Male)"
-        android:gravity="center"
-        android:textColor="@color/buttonColorSecondary"
-        android:textSize="13sp" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/profile_text"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="11dp"
-android:padding="2dp"
-        android:text="Basic Info"
-        android:textColor="@color/colorAccent"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        android:id="@+id/textView9" />
+    <ScrollView
+        android:id="@+id/srcollview_professional"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/mid_relat"
+        android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/textView9"
-        android:layout_marginStart="12dp"
-        android:text="Mobile Number"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="15sp"
-        android:id="@+id/textView10" />
+        <include layout="@layout/profile_professional_relat" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/textView10"
-        android:layout_below="@+id/textView10"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="5dp"
-        android:textSize="13sp"
-        android:fontFamily="@font/montserrat"
-        android:textColor="@color/colorPrimary"
-        android:text="+01 293821981209"
-        android:id="@+id/textView11" />
+    </ScrollView>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/textView10"
-        android:layout_below="@+id/textView11"
-        android:layout_marginTop="16dp"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="15sp"
-        android:text="Date Of Birth"
-        android:id="@+id/textView12" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/textView11"
-        android:layout_below="@+id/textView12"
-        android:layout_marginTop="5dp"
-        android:fontFamily="@font/montserrat"
-        android:text="26/01/1996"
-        android:textColor="@color/colorPrimary"
-        android:textSize="13sp" />
-
-</RelativeLayout>
-        <!--</LinearLayout>-->
-    <!--</ScrollView>-->
 </RelativeLayout>

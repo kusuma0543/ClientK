@@ -29,4 +29,12 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="title_activity_profile__page">Profile_Page</string>
+    <string name="title_activity_profile__edit__personal">Profile_Edit_Personal</string>
+    <string name="title_activity_profile__edit__educational">Profile_Edit_Educational</string>
+    <string name="title_activity_profile__edit__professional">Profile_Edit_Professional</string>
+    <string-array name = "spinner_item">
+        <item>Male</item>
+        <item>Female</item>
+
+    </string-array>
 </resources>
